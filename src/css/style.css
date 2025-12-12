@@ -11,6 +11,11 @@
     --font-cuerpo: 'Roboto', sans-serif;
 }
 
+/* AÑADE ESTO: Regla global para eliminar el scroll horizontal */
+html, body {
+    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
+
 body {
     font-family: var(--font-cuerpo);
     margin: 0;
