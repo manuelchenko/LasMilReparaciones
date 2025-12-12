@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Citas | Las Mil Reparaciones - Avellaneda</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="src/img/Logotp.png" alt="Las Mil Reparaciones"> 
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="index.html#proceso">Proceso</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-secundario">
+        <div class="hero-content">
+            <h1>Agenda tu Diagnóstico Electrónico</h1>
+            <h2>La solución a tu problema complejo empieza aquí. Contáctanos por el medio que prefieras.</h2>
+        </div>
+    </section>
+    
+    <section class="container">
+        <div class="contacto-grid">
+            
+            <div class="formulario-cita">
+                <h2>Solicitud de Cita y Consulta</h2>
+                <form action="procesar_cita.php" method="POST">
+                <!-- <form action="https://formspree.io/f/meoyrpok"method="POST"> -->
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 4000 5000" required>
+                    
+                    <label for="servicio">Servicio Deseado / Tipo de Consulta:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Diagnostico_ECU">Diagnóstico Electrónico ($40-$80 USD)</option>
+                        <option value="Inyeccion">Fallas de Inyección/Motor</option>
+                        <option value="Electricidad">Problemas Eléctricos Complejos</option>
+                        <option value="Mantenimiento">Mantenimiento Preventivo / Servicio Rápido</option>
+                        <option value="Flotas">Consulta de Servicios para Flotas</option>
+                        <option value="Otro">Otro (Especificar en Comentarios)</option>
+                    </select>
+
+                    <label for="comentarios">Detalle su Consulta o Comentario:</label>
+                    <textarea id="comentarios" name="comentarios" rows="5" placeholder="Ej: La luz Check Engine se enciende solo cuando viajo a alta velocidad."></textarea>
+                    
+                    <p style="font-size: 0.9em; margin-bottom: 25px;">* Un miembro de nuestro equipo se comunicará con usted en menos de 4 horas hábiles para confirmar su cita y horario.</p>
+
+                    <button type="submit">Enviar Solicitud de Cita</button>
+                </form>
+            </div>
+            
+            <div class="mapa-ubicacion">
+                <h3>Información de Contacto</h3>
+                <p>📍 Dirección: Villa Dominico 686, Avellaneda, Buenos Aires.</p>
+                <p>📞 Teléfono: <a href="tel:+54 9 11 xxxx-xxxx" style="color: var(--color-acento); text-decoration: none;">+54 9 11 7064-4758</a></p>
+                <p>📧 Email: lasmilreparaciones@gmail.com</p>
+                
+                <h3 style="margin-top: 30px;">Horarios de Atención</h3>
+                <p>Lunes a Viernes: 9:00 - 18:00 hs</p>
+                <p>Sábados (Solo Citas): 9:00 - 13:00 hs</p>
+
+                <iframe 
+                    class="google-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.792461877918!2d-58.3364969245464!3d-34.7071988673738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32eb518063057%3A0xc6657c7b744d03e9!2sVilla%20Dominico%20686%2C%20B1874%20Villa%20Dominico%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1701918150495!5m2!1ses-419!2sar" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="contacto-info">
+                <h4>Contacto y Ubicación</h4>
+                <p>📍 Villa Dominico 686, Avellaneda</p>
+                <p>📞 +54 9 11 7064-4758</p>
+                <p>📧 contacto@lasmilreparaciones.com</p>
+            </div>
+            <div class="horarios">
+                <h4>Horarios de Atención</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00 hs</p>
+                <p>Sábados (Solo Citas): 9:00 - 13:00 hs</p>
+            </div>
+        </div>
+        <p style="margin-top: 20px;">&copy; 2025 Todos los derechos reservados. Diseño WEB, Jose Manuel</p>
+    </footer>
+
+</body>
+</html>

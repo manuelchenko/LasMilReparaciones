@@ -1,0 +1,574 @@
+/* ==================================== */
+/* === ESTILOS BASE Y VARIABLES CSS === */
+/* ==================================== */
+:root {
+    --color-principal: #0A192F; /* Azul oscuro/casi negro (Fuerza) */
+    --color-acento: #FFD700; /* Dorado/Amarillo fuerte (Tecnología) */
+    --color-secundario: #EEEEEE; /* Gris claro (Transparencia) */
+    --color-texto-claro: #FFFFFF;
+    --color-texto-oscuro: #333333;
+    --font-titulo: 'Oswald', sans-serif;
+    --font-cuerpo: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-cuerpo);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-texto-oscuro);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-titulo);
+    color: var(--color-principal);
+    text-transform: uppercase;
+}
+
+/* === Botón de Acción Principal (CTA) === */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #E6C200; /* Dorado ligeramente más oscuro al pasar el ratón */
+}
+
+/* ==================================== */
+/* =========== HEADER / HERO ========== */
+/* ==================================== */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.logo img {
+    width: 200px;
+}
+header nav a {
+    color: var(--color-texto-claro); 
+    margin-left: 20px; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--color-acento);
+}
+
+.hero {
+    /* REEMPLAZAR con una imagen de alta tecnología/osciloscopio */
+    background-image: url('URL_DE_IMAGEN_DE_FONDO_DE_OSCILOSCOPIO_O_MOTOR_LIMPIO.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-texto-claro);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Capa oscura para mejor legibilidad */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: var(--color-acento);
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    color: var(--color-texto-claro);
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-transform: none;
+}
+
+/* ==================================== */
+/* =========== PILARES / VENTAJA ====== */
+/* ==================================== */
+.pilares {
+    background-color: var(--color-texto-claro);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pilares-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.pilar {
+    flex-basis: 30%;
+    padding: 20px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.pilar:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pilar h3 {
+    color: var(--color-principal);
+    font-size: 1.5em;
+}
+
+/* ==================================== */
+/* =========== SERVICIOS DEST. ======== */
+/* ==================================== */
+.servicios {
+    background-color: var(--color-secundario);
+    padding: 60px 0;
+}
+
+.servicios h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.servicio-card {
+    background-color: var(--color-texto-claro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.servicio-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.servicio-card h3 {
+    color: var(--color-principal);
+    border-bottom: 3px solid var(--color-acento);
+    padding-bottom: 10px;
+}
+
+/* ==================================== */
+/* =========== PROCESO (TRANSPARENCIA) */
+/* ==================================== */
+.proceso {
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.proceso h2 {
+    color: var(--color-acento);
+    margin-bottom: 50px;
+}
+
+.proceso-pasos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.paso {
+    flex-basis: 20%;
+}
+
+.paso h3 {
+    color: var(--color-texto-claro);
+}
+
+.paso-numero {
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* ============= FOOTER =============== */
+/* ==================================== */
+footer {
+    background-color: #222222;
+    color: var(--color-secundario);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    color: var(--color-acento);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    margin-top: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* ==================================== */
+/* =========== ESTILOS PÁGINA SERVICIOS ======== */
+/* ==================================== */
+
+.hero-secundario {
+    /* REEMPLAZAR con una imagen que muestre el equipo electromecánico */
+    background-image: url('URL_DE_IMAGEN_DE_EQUIPO_AVANZADO.jpg'); 
+    background-size: cover;
+    background-position: bottom;
+    height: 300px; /* Más pequeño que el Hero principal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-texto-claro);
+    position: relative;
+}
+
+.hero-secundario::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Capa más oscura para contraste */
+}
+
+.hero-secundario h1 {
+    font-size: 2.5em;
+    color: var(--color-acento);
+}
+
+.hero-secundario h2 {
+    font-size: 1.2em;
+    color: var(--color-texto-claro);
+    text-transform: none;
+}
+
+/* --- Precios Transparentes --- */
+
+.seccion-precios {
+    padding: 50px 0;
+    background-color: var(--color-texto-claro);
+    text-align: center;
+}
+
+.seccion-precios h2 {
+    margin-bottom: 40px;
+    color: var(--color-principal);
+}
+
+.tarifa-card {
+    display: inline-block;
+    width: 45%;
+    padding: 30px;
+    margin: 0 2%;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    vertical-align: top;
+}
+
+.tarifa-card h3 {
+    color: var(--color-principal);
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+}
+
+.precio-destacado {
+    font-size: 2em;
+    color: var(--color-acento);
+    font-family: var(--font-titulo);
+    margin: 10px 0;
+}
+
+/* --- Lista de Servicios Detallada --- */
+
+.lista-servicios {
+    padding: 60px 0;
+    background-color: var(--color-secundario);
+}
+
+.grupo-servicio {
+    background-color: var(--color-texto-claro);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.titulo-grupo {
+    color: var(--color-principal);
+    border-left: 5px solid var(--color-acento);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.lista-servicios ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-servicios li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--color-secundario);
+    font-size: 1.1em;
+}
+
+.lista-servicios li:last-child {
+    border-bottom: none;
+}
+
+
+/* ==================================== */
+/* =========== CONTACTO Y FORMULARIO ======== */
+/* ==================================== */
+
+.contacto-grid {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+    /* Ajuste para móviles: permite que los elementos se apilen */
+    flex-wrap: wrap; 
+}
+
+.mapa-ubicacion {
+    flex-basis: 40%;
+    /* En móviles, ocupa todo el ancho */
+    flex-grow: 1; 
+    
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-ubicacion h3 {
+    color: var(--color-acento);
+    margin-top: 0;
+}
+
+.mapa-ubicacion a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+.formulario-cita {
+    flex-basis: 60%;
+    flex-grow: 1; /* En móviles, también ocupa todo el ancho */
+    
+    background-color: var(--color-texto-claro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del Formulario */
+.formulario-cita label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.formulario-cita input[type="text"],
+.formulario-cita input[type="email"],
+.formulario-cita input[type="tel"],
+.formulario-cita select,
+.formulario-cita textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-family: var(--font-cuerpo);
+    transition: border-color 0.3s;
+}
+
+.formulario-cita input:focus,
+.formulario-cita select:focus,
+.formulario-cita textarea:focus {
+    border-color: var(--color-acento); /* Destaca el campo activo */
+    outline: none;
+}
+
+.formulario-cita textarea {
+    resize: vertical;
+}
+
+.formulario-cita button {
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.formulario-cita button:hover {
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+}
+
+/* Estilo para el mapa de Google */
+.google-map {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* Ajustes para la navegación en la página de contacto */
+/* Asegura que los enlaces se muestren correctamente aunque se haya cambiado el href 
+.header nav a {
+    /* Mantener los estilos ya definidos en styles.css para nav a 
+}
+*/
+
+
+/* Media Query para hacer la página más responsive en pantallas pequeñas */
+@media (max-width: 768px) {
+    .contacto-grid {
+        flex-direction: column; /* Apila las columnas en vista móvil */
+    }
+
+    .formulario-cita, .mapa-ubicacion {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+
+
+/* ==================================== */
+/* =========== MEDIA QUERIES (Móvil) == */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    
+    /* === Configuración de la Cabecera (Header) === */
+    
+    header {
+        padding: 15px 0; /* Reducir padding en móvil */
+    }
+
+    .header-content {
+        /* Desactiva el 'space-between' y permite el apilamiento */
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-bottom: 15px; /* Espacio entre el logo y el menú */
+    }
+
+    header nav {
+        /* Permite que el menú sea flexible para apilar */
+        display: flex; 
+        flex-direction: row; /* Mantener horizontal si hay espacio */
+        flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+        justify-content: center;
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    header nav a {
+        /* Estilos para los enlaces del menú en columna/fila */
+        margin: 5px 10px; /* Separación horizontal y vertical */
+        font-size: 0.9em;
+        padding: 5px 0;
+    }
+    
+    /* === Ajustes Generales de Contenido === */
+    
+    .hero {
+        height: 400px; /* Reducir la altura del Hero */
+    }
+
+    .hero-content h1 {
+        font-size: 2em; /* Reducir el tamaño del título principal */
+    }
+
+    .hero-content h2 {
+        font-size: 1.1em; /* Reducir el subtítulo */
+    }
+
+    /* === Ajuste de los Pilares/Grid (Apilar en Móvil) === */
+    .pilares-grid,
+    .proceso-pasos {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        gap: 20px; /* Espacio entre elementos apilados */
+    }
+    
+    /* === Ajuste para las tarjetas de precios de contacto (contacto.html) === */
+    .tarifa-card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px 0;
+    }
+    
+    /* También se recomienda asegurar que el .contacto-grid ya tenga flex-wrap: wrap 
+       o una media query similar, como hicimos en la respuesta anterior de contacto.html */
+}
