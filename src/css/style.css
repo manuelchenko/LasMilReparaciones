@@ -527,9 +527,10 @@ footer p {
         text-align: center;
     }
     
-    .logo {
-        margin-bottom: 15px; /* Espacio entre el logo y el menú */
+    /* .logo { 
+        margin-bottom: 15px; /* Espacio entre el logo y el menú
     }
+    */
 
     header nav {
         /* Permite que el menú sea flexible para apilar */
